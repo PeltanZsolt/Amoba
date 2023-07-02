@@ -1,0 +1,61 @@
+#container {
+  background-color: rgb(48, 50, 173);
+  height: 100%;
+  margin: -2rem auto;
+  padding: 1rem;
+  h1 {
+    text-align: center;
+    color: rgb(167, 166, 166);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding-top: 2rem;
+    height: 2rem;
+  }
+  h2 {
+    text-align: center;
+    color: gray;
+  }
+  table {
+    width: (min(calc(96vh - 8rem), 96vw));
+    height: (min(calc(96vh - 8rem), 96vw));
+    margin: auto;
+    tr {
+      margin: 1rem;
+      padding: 1rem;
+      th {
+        margin: 1rem;
+      }
+    }
+    th,
+    td {
+      background-color: rgb(216, 216, 216);
+    }
+    div {
+      svg {
+        height: 90%;
+      }
+    }
+  }
+  form {
+    align-items: center;
+    mat-form-field {
+      margin: 0.5rem;
+    }
+    #users {
+      background-color: green;
+      mat-card {
+        display: flex;
+        flex-direction: row;
+      }
+      .field {
+        margin: 0 1rem;
+        width: 230%;
+        display: inline;
+      }
+    }
+  }
+  button {
+    display: block;
+    margin: 1rem auto;
+  }
+}

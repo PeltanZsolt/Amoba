@@ -1,0 +1,19 @@
+<form [formGroup]="formGroup">
+  <h2>
+    Bejelentekezés
+  </h2>
+  <mat-form-field>
+    <mat-label>Felhasználói név</mat-label>
+    <input matInput maxlength="15" inputmode="full-width-latin" placeholder="felhasználó neve"
+    formControlName="username">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Jelszó</mat-label>
+    <input matInput maxlength="50" inputmode="full-width-latin" placeholder="jelszó"
+    formControlName="password">
+  </mat-form-field>
+  <mat-error *ngIf="loginError">Téves felhasználónév vagy jelszó</mat-error>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onLogin()" [disabled]="formGroup.invalid">login</button>
+  </div>
+</form>

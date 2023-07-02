@@ -1,0 +1,16 @@
+form {
+  padding: 1rem;
+  h2 {
+    text-align: center;
+    color: rgb(75, 75, 75);
+  }
+  mat-form-field {
+    display: block;
+  }
+  div {
+    button {
+      width: 45%;
+      margin: 0 auto;
+    }
+  }
+}
