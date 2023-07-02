@@ -56,7 +56,8 @@
         <mat-form-field class="field">
           <mat-label>Válassz jelet</mat-label>
           <mat-select [formControlName]="'user'+ (i) +'symbol'">
-            <mat-option *ngFor="let symbol of symbols" [value]="symbol">{{symbol}}</mat-option>
+            <mat-option  [value]="symbols[0]">{{symbols[0]}}</mat-option>
+            <mat-option  [value]="symbols[1]">{{symbols[1]}}</mat-option>
           </mat-select>
         </mat-form-field>
       </mat-card>
