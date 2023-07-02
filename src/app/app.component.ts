@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { User } from './core/models/user.model';
+import { colors } from './core/models/color.model';
 import { MatDialog } from '@angular/material/dialog';
 import { LoginComponent } from './views/login/login.component';
-import { colors } from './core/models/color.model';
 
 @Component({
   selector: 'app-root',
@@ -14,20 +14,16 @@ export class AppComponent implements OnInit {
   title = 'amoba-pwa';
   isLoggedIn = false;
   started = false;
-
   rows = Array();
   columns = Array();
   formGroup: FormGroup;
   size = 10;
   colors = colors;
   symbols = ['o', 'x', '_'];
-
-  usersCount: number = 2;
+  usersCount = 2;
   users = Array<User>(this.usersCount);
   userIndex = 0;
-
   table: User[][] = [];
-
   nextUser: string;
   clickCount = 0;
   win = false;
@@ -37,8 +33,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     const dialogRef = this.dialog.open(LoginComponent, { disableClose: true });
-    dialogRef.afterClosed().subscribe((result) => {
-      this.isLoggedIn = true;
+    dialogRef.afterClosed().subscribe((result: any) => {
+      this.isLoggedIn = result.success;
     });
 
     this.formGroup = new FormGroup({
@@ -113,7 +109,7 @@ export class AppComponent implements OnInit {
       }
       case 'color': {
         this.users[userIndex].color = value;
-        this.users.forEach((user) => {
+        this.users.forEach(() => {
           for (let i = 0; i < this.usersCount; i++) {
             if (i !== userIndex) {
               this.users[i].availableColors = this.getAvailableColors(i);

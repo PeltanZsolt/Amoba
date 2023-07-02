@@ -16,11 +16,9 @@ import { LoginComponent } from './views/login/login.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { TranslatePipe } from './core/translate.pipe';
 import { LoginService } from './core/login.service';
-import { GameFormComponent } from './views/game-form/game-form.component';
-import { GameBoardComponent } from './views/game-board/game-board.component';
 
 @NgModule({
-  declarations: [AppComponent, TranslatePipe, LoginComponent, GameFormComponent, GameBoardComponent],
+  declarations: [AppComponent, TranslatePipe, LoginComponent],
   imports: [
     BrowserModule,
     FormsModule,
@@ -38,7 +36,6 @@ import { GameBoardComponent } from './views/game-board/game-board.component';
     MatCardModule,
     MatSelectModule,
     MatDialogModule,
-
   ],
   providers: [LoginService],
   bootstrap: [AppComponent],

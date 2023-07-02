@@ -26,7 +26,7 @@ export class LoginComponent {
     const formData = this.formGroup.value;
 
     if (this.loginService.checkCredentials(formData.username, formData.password)) {
-      this.dialogRef.close({loggedIn: true});
+      this.dialogRef.close({success: true});
     }
 
     this.loginError = true;
