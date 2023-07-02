@@ -5,7 +5,7 @@
 
   <h2 *ngIf="win" [style.background-color]="users[userIndex].color">{{users[userIndex].name}} nyert!</h2>
   <h2 *ngIf="draw" class="windraw">Döntetlen!</h2>
-  <h2 *ngIf="started" [style.color]="users[userIndex].color" >Következik: {{nextUser}}</h2>
+  <h2 *ngIf="started" [style.color]="users[userIndex].color">Következik: {{nextUser}}</h2>
 
   <table *ngIf="started || win || draw" [style.background-color]="win || draw? 'rgb(185, 185, 185)' : ' rgb(80, 80, 80)'">
     <tr class="rows" *ngFor="let _ of [].constructor(size), let row= index">
